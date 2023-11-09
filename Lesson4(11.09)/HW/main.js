@@ -15,8 +15,25 @@
 
 // ______________Task 1_______________
 
-let str = "";
-for (let i = 10; i <= 20; i++) {
-  str += `${i},`;
-}
-console.log(str);
+// let str = "";
+// for (let i = 10; i <= 20; i++) {
+//   str += `${i},`;
+// }
+// console.log(str);
+
+// __or
+
+// let str = "";
+// for (let i = 10; i <= 20; i++) {
+//   str += i;
+//   if (i !== 20) {
+//     str += ", ";
+//   }
+// }
+// console.log(str);
+
+// ______________Task 2_______________
+// for (let i = 10; i <= 20; i++) {
+//   let square = i * i;
+//   console.log(`${i} ^ 2 = ${square}`);
+// }
