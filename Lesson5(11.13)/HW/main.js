@@ -140,5 +140,3 @@ function findMinNumInd(arr) {
     `Mінімальний елемент масиву це ${minNum} , його порядковий індекс ${indexMinNum}`
   );
 }
-
-findMinNumInd(data);
