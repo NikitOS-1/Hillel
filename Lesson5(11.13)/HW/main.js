@@ -119,3 +119,26 @@ function findSumPositivElem(arr) {
     `Кількість позитивних елементів: ${length}.  Загальна сума = ${sum}.`
   );
 }
+
+// 2.Знайти мінімальний елемент масиву та його порядковий номер.
+function findMinNumInd(arr) {
+  let minNum = arr[0];
+  let indexMinNum = 0;
+
+  for (const num of arr) {
+    if (num < minNum) {
+      minNum = num;
+    }
+  }
+
+  arr.map((number, index) => {
+    if (number === minNum) {
+      return (indexMinNum = index);
+    }
+  });
+  console.log(
+    `Mінімальний елемент масиву це ${minNum} , його порядковий індекс ${indexMinNum}`
+  );
+}
+
+findMinNumInd(data);
