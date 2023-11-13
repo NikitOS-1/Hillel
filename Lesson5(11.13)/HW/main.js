@@ -34,7 +34,7 @@ function addDataToArray(length) {
 function arrChanges(arr) {
   let choise = Number(
     prompt(
-      "How do you want to modify this array? Choose your option Please\n enter - 1) Sort\n enter - 2) Remove elements from array 2 to 4\n enter - 3) Cancel \n ----and then I show this date on this page"
+      "How do you want to modify this array? Choose your option Please\n enter - 1) Sort\n enter - 2) Remove elements from array 2 to 4\n ----and then I show this date on this page"
     )
   );
   if (isNaN(choise)) {
@@ -47,6 +47,16 @@ function arrChanges(arr) {
 
   if (choise === 1) {
     return arr.sort((a, b) => a - b);
+  }
+  if (choise === 2) {
+    if (arr.length <= 4) {
+      alert(
+        "The length of your array is less than 4 \n Choise another option!"
+      );
+      return arrChanges(arr);
+    }
+    let removedElemOnArr = arr.splice(2, 4);
+    return removedElemOnArr;
   }
 }
 
@@ -61,11 +71,16 @@ function app() {
   if (arrData === null) return;
 
   alert(`Length your Array = ${arrLength} \n Your Data = [${arrData.join()}]`);
+  let beforeArr = arrData.join();
 
   const arrChange = arrChanges(arrData);
-  if (arrChange === null) return;
-
-  document.write(arrChange.join());
+  if (arrChange === null) {
+    return;
+  } else {
+    document.write(`Your Data before change = [${beforeArr}]`);
+    document.write(`---------`);
+    document.write(`Your Data after changed = [${arrChange.join()}]`);
+  }
 }
 
 app();
