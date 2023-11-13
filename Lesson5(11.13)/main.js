@@ -37,3 +37,5 @@ const arr2 = new Array();
 // Expected output: "a"
 // Expected output: "b"
 // Expected output: "c"
+
+// Метод map() создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
