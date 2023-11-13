@@ -12,3 +12,18 @@ const arr2 = new Array();
 // .unshift() - add element in to front array
 
 // .shift() - delete fist element in array
+
+// --Метод slice() возвращает новый массив, содержащий копию части исходного массива.
+
+// var myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
+// var removed = myFish.splice(3, 1);
+
+// --Метод splice() изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.
+
+// array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+
+// var myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
+// var removed = myFish.splice(3, 1);
+
+// // removed равен ["mandarin"]
+// // myFish равен ["angel", "clown", "drum", "sturgeon"]
