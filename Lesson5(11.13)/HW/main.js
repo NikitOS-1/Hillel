@@ -161,3 +161,15 @@ function findMaxNumInd(arr) {
     `Максимальний елемент масиву це ${minNum} , його порядковий індекс ${indexMinNum}`
   );
 }
+
+// 4.Визначити кількість негативних елементів.
+function findNegotiveElem(arr) {
+  let array = [];
+
+  for (const num of arr) {
+    if (num < 0) array.push(num);
+  }
+  let length = array.length;
+
+  return console.log(`Кількість негативних елементів: ${length}. `);
+}
