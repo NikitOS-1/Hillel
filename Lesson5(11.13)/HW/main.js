@@ -197,3 +197,16 @@ function findPosPair(arr) {
 
   return console.log(`Кількість непарних позитивних елементів: ${length}.`);
 }
+
+// 7.Знайти суму парних позитивних елементів.
+function findPosSumPair(arr) {
+  let array = [];
+
+  for (const num of arr) {
+    if (num > 0 && num % 2 === 0) array.push(num);
+  }
+
+  let sum = array.reduce((acc, num) => acc + num);
+
+  return console.log(`Cума парних позитивних елементів: ${sum}.`);
+}
