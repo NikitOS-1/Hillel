@@ -175,7 +175,6 @@ function findNegotiveElem(arr) {
 }
 
 // 5.Знайти кількість непарних позитивних елементів.
-
 function findPosNotPair(arr) {
   let array = [];
 
@@ -185,4 +184,16 @@ function findPosNotPair(arr) {
   let length = array.length;
 
   return console.log(`Кількість непарних позитивних елементів: ${length}. `);
+}
+
+// 6.Знайти кількість парних позитивних елементів.
+function findPosPair(arr) {
+  let array = [];
+
+  for (const num of arr) {
+    if (num > 0 && num % 2 === 0) array.push(num);
+  }
+  let length = array.length;
+
+  return console.log(`Кількість непарних позитивних елементів: ${length}.`);
 }
