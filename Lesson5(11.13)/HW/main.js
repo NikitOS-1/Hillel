@@ -140,3 +140,24 @@ function findMinNumInd(arr) {
     `Mінімальний елемент масиву це ${minNum} , його порядковий індекс ${indexMinNum}`
   );
 }
+
+// 3.Знайти максимальний елемент масиву та його порядковий номер.
+function findMaxNumInd(arr) {
+  let minNum = arr[0];
+  let indexMinNum = 0;
+
+  for (const num of arr) {
+    if (num > minNum) {
+      minNum = num;
+    }
+  }
+
+  arr.map((number, index) => {
+    if (number === minNum) {
+      return (indexMinNum = index);
+    }
+  });
+  console.log(
+    `Максимальний елемент масиву це ${minNum} , його порядковий індекс ${indexMinNum}`
+  );
+}
