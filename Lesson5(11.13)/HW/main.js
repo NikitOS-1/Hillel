@@ -223,3 +223,16 @@ function findPosSumNotPair(arr) {
 
   return console.log(`Cума непарних позитивних елементів: ${sum}.`);
 }
+
+// 9.Знайти добуток позитивних елементів.
+function findPosMult(arr) {
+  let array = [];
+
+  for (const num of arr) {
+    if (num > 0) array.push(num);
+  }
+
+  let sum = array.reduce((acc, num) => acc * num);
+
+  return console.log(`Добуток позитивних елементів = ${sum}.`);
+}
