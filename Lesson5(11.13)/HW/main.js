@@ -236,3 +236,21 @@ function findPosMult(arr) {
 
   return console.log(`Добуток позитивних елементів = ${sum}.`);
 }
+
+// 10.Знайти найбільший серед елементів масиву, остальні обнулити.
+function findMaxNumRemoveOther(arr) {
+  let maxNum = arr[0];
+  let newArray = [];
+  for (const num of arr) {
+    if (num > maxNum) maxNum = num;
+  }
+  for (const num of arr) {
+    if (num === maxNum) {
+      newArray.push(num);
+    } else {
+      newArray.push(0);
+    }
+  }
+
+  return console.log(newArray.join());
+}
