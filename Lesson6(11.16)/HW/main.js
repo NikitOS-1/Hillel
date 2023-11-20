@@ -118,3 +118,21 @@ function fillArrayOfArray() {
 
 // _______________________________________________________________
 // 4.Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом. 'func(" hello world", ['l', 'd'])' поверне нам "heo wor". Вихідний рядок та символи для видалення задає користувач.
+/**
+ *
+ * @param {String} string - Enter the line from which you want to remove the letter
+ * @param {Array} arrayLetters - Enter an array with the letters you want to delete
+ * @returns {String} - Returns a string with letters removed
+ */
+function removeLetterFromString(string, arrayLetters) {
+  if (typeof string !== "string" || !Array.isArray(arrayLetters)) {
+    return "Please enter the words and then the letters you want to delete";
+  }
+
+  const changedString = string
+    .split("")
+    .filter((letter) => !arrayLetters.includes(letter))
+    .join("");
+
+  return changedString;
+}
