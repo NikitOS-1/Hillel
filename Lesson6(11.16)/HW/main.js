@@ -26,7 +26,7 @@ const array = [
 /**
  *
  * @param {Array} arr - Receives an array of data
- * @returns - Returns the arithmetic average of all typeof Number elements in an array
+ * @returns {Number} - Returns the arithmetic average of all typeof Number elements in an array
  */
 function middleValueNumber(arr) {
   let numbersOfArray = arr
@@ -45,12 +45,13 @@ function middleValueNumber(arr) {
 
 // _______________________________________________________________
 // 2.Написати функцію doMath(x, znak, y), яка отримує 3 аргументи: числа x і y, рядок znak. У змінній znak може бути: +, -, *, /, %, ^ (ступінь ).Вивести результат математичної дії, вказаної в змінній znak.Обидва числа і знак виходять від користувача.
+
 /**
  *
  * @param {Number} x - Your first number
  * @param {String} znak - Use an arithmetic operator
  * @param {Number} y - Your second number
- * @returns - Returns the sum of x and y with the selected arithmetic operator
+ * @returns {Number} - Returns the sum of x and y with the selected arithmetic operator
  */
 function doMath(x, znak, y) {
   let result;
@@ -82,29 +83,38 @@ function doMath(x, znak, y) {
 // _______________________________________________________________
 // 3.Написати функцію заповнення даними користувача двомірного масиву. Довжину основного масиву і внутрішніх масивів задає користувач. Значення всіх елементів всіх масивів задає користувач.
 
+/**
+ *
+ * @returns {Array} returns a two-dimensional array filled with client data
+ */
 function fillArrayOfArray() {
-  let arrayOfArray = [];
-  let secondArray = [];
-  let lengthArrayFirst = Number(prompt("Enter the length of the first array"));
+  let lengthArrayGeneral = Number(
+    prompt("Enter the length of the general array")
+  );
   let lengthArraySecond = Number(
-    prompt("Enter the length of the second array")
+    prompt("Enter the length of the internal array")
   );
 
-  if (isNaN(lengthArrayFirst) || isNaN(lengthArraySecond))
+  let arrayOfArrays = [];
+
+  if (isNaN(lengthArrayGeneral) || isNaN(lengthArraySecond))
     return "You need use only Number";
 
-  for (let i = 0; i < lengthArrayFirst; i++) {
+  for (let i = 0; i < lengthArrayGeneral; i++) {
+    let secondArray = [];
+
     for (let j = 0; j < lengthArraySecond; j++) {
       let item = prompt(
-        `Enter your item to add in second Array, his length = ${lengthArraySecond}`
+        `Enter a value for the (Array:${i + 1}, Element:${j + 1})`
       );
       secondArray.push(item);
     }
-    let item = prompt(
-      `Enter your item to add in second Array, his length = ${lengthArrayFirst}`
-    );
-    arrayOfArray.push(item);
+
+    arrayOfArrays.push(secondArray);
   }
-  return console.log(arrayOfArray.push(secondArray));
+
+  return console.log(arrayOfArrays);
 }
-fillArrayOfArray();
+
+// _______________________________________________________________
+// 4.Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом. 'func(" hello world", ['l', 'd'])' поверне нам "heo wor". Вихідний рядок та символи для видалення задає користувач.
