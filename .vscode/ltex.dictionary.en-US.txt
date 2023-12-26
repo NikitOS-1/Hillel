@@ -1,6 +1,0 @@
-onclick
-img
-prev
-ios
-nextImage
-prevImage
