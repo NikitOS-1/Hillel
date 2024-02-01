@@ -1,5 +1,5 @@
 function* idGenerator() {
-  let count = 0;
+  let count = 1;
 
   while (true) {
     yield "id" + count;
